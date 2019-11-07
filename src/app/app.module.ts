@@ -12,6 +12,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { HeaderComponent } from './header/header.component';
 import { CatalogComponent } from './catalog/catalog.component';
+import { DetailArticleComponent } from './detail-article/detail-article.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { CatalogComponent } from './catalog/catalog.component';
     AppComponent,
     HeaderComponent,
     CatalogComponent,
+    DetailArticleComponent
   ],
   imports: [
     BrowserModule,
