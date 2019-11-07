@@ -10,11 +10,15 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
+import { HeaderComponent } from './header/header.component';
+import { CatalogComponent } from './catalog/catalog.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    CatalogComponent,
   ],
   imports: [
     BrowserModule,
