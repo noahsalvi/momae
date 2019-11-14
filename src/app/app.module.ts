@@ -14,7 +14,12 @@ import { HeaderComponent } from './header/header.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetailArticleComponent } from './detail-article/detail-article.component';
-
+import { AdminComponent } from './admin/admin.component';
+import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
+import { LoginComponent } from './admin/login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbAuthFirebaseUIModule } from '@firebaseui/ng-bootstrap';
+import { LogoutComponent } from './admin/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -22,17 +27,24 @@ import { DetailArticleComponent } from './detail-article/detail-article.componen
     HeaderComponent,
     CatalogComponent,
     FooterComponent,
-    DetailArticleComponent
+    DetailArticleComponent,
+    AdminComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbAuthFirebaseUIModule.forRoot(environment.firebase),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireStorageModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    AngularFireAuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
