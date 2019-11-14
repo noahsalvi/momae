@@ -13,6 +13,7 @@ import { environment } from '../environments/environment';
 import { HeaderComponent } from './header/header.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { FooterComponent } from './footer/footer.component';
+import { DetailArticleComponent } from './detail-article/detail-article.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     CatalogComponent,
     FooterComponent,
+    DetailArticleComponent
   ],
   imports: [
     BrowserModule,
