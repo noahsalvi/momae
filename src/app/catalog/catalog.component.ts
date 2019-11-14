@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-catalog',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./catalog.component.scss']
 })
 export class CatalogComponent implements OnInit {
-
-  constructor() { }
+    constructor() {}
+  ///constructor(  private route: ActivatedRoute, private router: Router, private service: ProductService) { }
 
   ngOnInit() {
+  ///this.product = this.route.ParamMap.pipe
   }
 
+  addToCart() {
+
+  }
+
+  showDetails() {
+
+  }
 }

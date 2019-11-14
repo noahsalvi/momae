@@ -14,6 +14,7 @@ export class DetailArticleComponent{
 
   addToCart() {
     ///this.cartService.addToCart(this.product);
+    
 }
 
 }
