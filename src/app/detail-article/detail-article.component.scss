@@ -1,7 +1,14 @@
 /* style the card */
 .card {
-    width: 18rem;
-    margin-bottom: 20px;
+    width: 320px;
+    background-color: lightgray;
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 10px;
+    .card-body{
+        width: 300px;
+        background-color:lightgray;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
 }
 
 /* remove padding from buttons */
