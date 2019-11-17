@@ -20,6 +20,7 @@ import { LoginComponent } from './admin/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbAuthFirebaseUIModule } from '@firebaseui/ng-bootstrap';
 import { LogoutComponent } from './admin/logout/logout.component';
+import { ArticlesComponent } from './admin/articles/articles.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LogoutComponent } from './admin/logout/logout.component';
     DetailArticleComponent,
     AdminComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    ArticlesComponent
   ],
   imports: [
     BrowserModule,

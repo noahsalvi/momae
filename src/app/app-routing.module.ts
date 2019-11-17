@@ -6,6 +6,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { LoginComponent } from './admin/login/login.component';
 import { LogoutComponent } from './admin/logout/logout.component';
+import { ArticlesComponent } from './admin/articles/articles.component';
 
 
 const redirectToCatalog = () => redirectUnauthorizedTo(['']);
@@ -20,6 +21,9 @@ export const routes: Routes = [
 { 
   path: 'admin', component: AdminComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectToCatalog }, 
   children: [
+    {
+      path: '', component: ArticlesComponent
+    },
     {
       path: 'logout', component: LogoutComponent 
     }

@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
 		  if(user != null) {
 			  if (user.email != "noahsalvi@me.com") {
 				  this.logout();
+				  this.router.navigate(['']);
 			  } else {
 				  this.router.navigate(['/admin']);
 			  }
