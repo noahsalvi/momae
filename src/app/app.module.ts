@@ -14,7 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetailArticleComponent } from './detail-article/detail-article.component';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { DetailArticleComponent } from './detail-article/detail-article.componen
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireStorageModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
