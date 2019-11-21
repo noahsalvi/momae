@@ -1,0 +1,21 @@
+$secondaryC: #363a45;
+$accentC: #6d72ed;
+$containerC: rgb(196, 196, 196, 0.33);
+$itemC: #c4c4c4;
+
+.button {
+  margin-top: 500pt;
+  padding: 15px 20px;
+  background-color: $accentC;
+  border-radius: 10px;
+  cursor: grab;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+  .button-text {
+    font-size: 18px;
+    color: white;
+    text-shadow: $secondaryC 1px 1px;
+  }
+}

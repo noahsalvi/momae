@@ -1,0 +1,48 @@
+<h2>Artikel Bearbeiten</h2>
+
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputTitel">Titel</label>
+      <input
+        [(ngModel)]="article.titel"
+        type="text"
+        class="form-control"
+        name="inputTitel"
+      />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputBeschreibuung">Beschreibung</label>
+    <input
+      [(ngModel)]="article.beschreibung"
+      type="text"
+      class="form-control"
+      name="inputBeschreibung"
+    />
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="inputMenge">Menge</label>
+      <input
+        [(ngModel)]="article.menge"
+        type="number"
+        class="form-control"
+        name="inputMenge"
+      />
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputPreis">Preis</label>
+      <input
+        [(ngModel)]="article.preis"
+        type="number"
+        class="form-control"
+        name="inputPreis"
+      />
+    </div>
+  </div>
+  <div class="mt-2"></div>
+  <span class="button" (click)="changeArticle()">
+    <span class="button-text">Ändern</span>
+  </span>
+</form>
