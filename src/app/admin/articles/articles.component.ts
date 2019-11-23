@@ -21,7 +21,9 @@ export class ArticlesComponent implements OnInit {
 
   constructor(db: AngularFirestore) {
     this.db = db;
-    this.articleCollection = db.collection("artikel");
+    this.articleCollection = db.collection("artikel", ref =>
+      ref.orderBy("titel")
+    );
 
     this.articles = this.articleCollection.snapshotChanges().pipe(
       map(actions =>
