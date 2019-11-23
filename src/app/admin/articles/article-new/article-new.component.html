@@ -47,6 +47,22 @@
       />
     </div>
   </div>
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label class="imageButton" for="file">Bild hochladen</label>
+      <input
+        class="imageInput"
+        id="file"
+        type="file"
+        (change)="upload($event)"
+        accept=".png,.jpg"
+      />
+      <progress max="100" [value]="uploadProgress | async"></progress>
+      <span *ngIf="(uploadProgress | async) == 100" class="upload-completed"
+        >Bild wurde hochgeladen</span
+      >
+    </div>
+  </div>
   <div class="mt-2"></div>
   <span class="button" (click)="addArticle()">
     <span class="button-text">Erfassen</span>

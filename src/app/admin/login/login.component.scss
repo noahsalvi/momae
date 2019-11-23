@@ -1,11 +1,22 @@
-.form-window {
-    width: 500px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    padding: 15px;
-    border: 1pt solid darkgray;
-    border-radius: 5px;
+$secondaryC: #363a45;
+$accentC: #6d72ed;
+$containerC: rgb(196, 196, 196, 0.33);
+$itemC: #c4c4c4;
 
-    transform: translate(-50%, -50%);
+.form-window {
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 15px;
+  border: 1pt solid darkgray;
+  border-radius: 5px;
+
+  transform: translate(-50%, -50%);
+}
+
+.header-banner {
+  background-color: $secondaryC;
+  height: 150px;
+  border-bottom: 4pt $accentC solid;
 }

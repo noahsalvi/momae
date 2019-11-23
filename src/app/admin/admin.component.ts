@@ -13,11 +13,7 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {}
 
-  login() {
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
-  }
-
-  logout() {
-    this.afAuth.auth.signOut();
+  async logout() {
+    await this.afAuth.auth.signOut().then(() => this.router.navigate(["/"]));
   }
 }

@@ -2,7 +2,7 @@
   <div class="header-banner">
     <span [routerLink]="['/admin']" class="logo"><span>MoMae</span></span>
     <header class="admin-header">
-      <div class="admin-showcase" [routerLink]="['logout']">
+      <div class="admin-showcase" (click)="logout()">
         <span class="admin-lable">Admin</span>
         <svg
           aria-hidden="true"

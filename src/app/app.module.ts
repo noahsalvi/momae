@@ -18,11 +18,11 @@ import { AngularFireAuthGuard } from "@angular/fire/auth-guard";
 import { LoginComponent } from "./admin/login/login.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgbAuthFirebaseUIModule } from "@firebaseui/ng-bootstrap";
-import { LogoutComponent } from "./admin/logout/logout.component";
 import { ArticlesComponent } from "./admin/articles/articles.component";
 import { ArticleNewComponent } from "./admin/articles/article-new/article-new.component";
 import { ArticleEditComponent } from "./admin/articles/article-edit/article-edit.component";
 import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -33,7 +33,6 @@ import { FormsModule } from "@angular/forms";
     DetailArticleComponent,
     AdminComponent,
     LoginComponent,
-    LogoutComponent,
     ArticlesComponent,
     ArticleNewComponent,
     ArticleEditComponent
@@ -47,7 +46,8 @@ import { FormsModule } from "@angular/forms";
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [AngularFireAuthGuard],
   bootstrap: [AppComponent]
