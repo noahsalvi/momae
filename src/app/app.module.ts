@@ -23,7 +23,8 @@ import { ArticleNewComponent } from "./admin/articles/article-new/article-new.co
 import { ArticleEditComponent } from "./admin/articles/article-edit/article-edit.component";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
-import { ReservationsComponent } from './admin/reservations/reservations.component';
+import { ReservationsComponent } from "./admin/reservations/reservations.component";
+import { ReservationEditComponent } from './admin/reservations/reservation-edit/reservation-edit.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ReservationsComponent } from './admin/reservations/reservations.compone
     ArticlesComponent,
     ArticleNewComponent,
     ArticleEditComponent,
-    ReservationsComponent
+    ReservationsComponent,
+    ReservationEditComponent
   ],
   imports: [
     BrowserModule,

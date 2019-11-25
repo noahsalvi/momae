@@ -9,11 +9,11 @@ import { map, filter, finalize, tap } from "rxjs/operators";
 import { of, Observable, interval, combineLatest } from "rxjs";
 import { isDefined } from "@angular/compiler/src/util";
 
-interface Reservation {
+export class Reservation {
   id: string;
   vorname: string;
   name: string;
-  datum: Date;
+  datum: any;
   artikel: Observable<any>;
   telefon: string;
   email: string;
@@ -49,7 +49,7 @@ export class ReservationsComponent implements OnInit {
                 .getElementById("reservation-section")
                 .classList.remove("d-none");
               console.log(params.data());
-              return params.data();
+              return { ...params.data(), id: params.id };
             })
           };
         })
@@ -57,7 +57,12 @@ export class ReservationsComponent implements OnInit {
     );
   }
 
-  deleteReservation(docId: string): void {
-    this.reservationCollection.doc(docId).delete;
+  deleteReservation(reservation: Reservation, artikel: any): void {
+    this.db
+      .collection("artikel")
+      .doc(artikel["id"])
+      .update({ menge: artikel["menge"] - 1 });
+
+    // this.reservationCollection.doc(reservation.id).delete();
   }
 }

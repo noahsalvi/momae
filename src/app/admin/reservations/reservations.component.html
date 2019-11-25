@@ -16,7 +16,7 @@
           >
           <span class="price">CHF {{ artikel.preis }}</span>
           <svg
-            routerLink="reservation/edit/{{ reservation.id }}"
+            routerLink="edit/{{ reservation.id }}"
             aria-hidden="true"
             focusable="false"
             data-prefix="fas"
@@ -33,7 +33,7 @@
           </svg>
 
           <svg
-            (click)="deleteReservation(reservation.id)"
+            (click)="deleteReservation(reservation, artikel)"
             aria-hidden="true"
             focusable="false"
             data-prefix="fas"
