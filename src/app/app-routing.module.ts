@@ -11,6 +11,7 @@ import { LoginComponent } from "./admin/login/login.component";
 import { ArticlesComponent } from "./admin/articles/articles.component";
 import { ArticleNewComponent } from "./admin/articles/article-new/article-new.component";
 import { ArticleEditComponent } from "./admin/articles/article-edit/article-edit.component";
+import { ReservationsComponent } from "./admin/reservations/reservations.component";
 
 const redirectToCatalog = () => redirectUnauthorizedTo(["/"]);
 
@@ -40,6 +41,10 @@ export const routes: Routes = [
       {
         path: "articles/edit/:id",
         component: ArticleEditComponent
+      },
+      {
+        path: "reservations",
+        component: ReservationsComponent
       }
     ]
   },

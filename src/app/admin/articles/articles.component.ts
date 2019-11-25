@@ -1,10 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import {
   AngularFirestoreCollection,
-  AngularFirestore,
-  DocumentReference,
-  DocumentData,
-  DocumentChangeAction
+  AngularFirestore
 } from "@angular/fire/firestore";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
@@ -36,9 +33,7 @@ export class ArticlesComponent implements OnInit {
     );
   }
 
-  ngOnInit() {
-    console.log(this);
-  }
+  ngOnInit() {}
 
   deleteArticle(docId: string) {
     this.db

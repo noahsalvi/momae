@@ -23,6 +23,7 @@ import { ArticleNewComponent } from "./admin/articles/article-new/article-new.co
 import { ArticleEditComponent } from "./admin/articles/article-edit/article-edit.component";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { ReservationsComponent } from './admin/reservations/reservations.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HttpClientModule } from "@angular/common/http";
     LoginComponent,
     ArticlesComponent,
     ArticleNewComponent,
-    ArticleEditComponent
+    ArticleEditComponent,
+    ReservationsComponent
   ],
   imports: [
     BrowserModule,
