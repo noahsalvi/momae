@@ -1,0 +1,44 @@
+$secondaryC: #363a45;
+$accentC: #6d72ed;
+$containerC: rgb(196, 196, 196, 0.33);
+$itemC: #c4c4c4;
+
+.button {
+  margin-top: 500pt;
+  padding: 15px 20px;
+  background-color: $accentC;
+  border-radius: 10px;
+  cursor: grab;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+  .button-text {
+    font-size: 18px;
+    color: white;
+    text-shadow: $secondaryC 1px 1px;
+  }
+}
+
+.imageButton {
+  width: 150px;
+  text-align: center;
+  background-color: rgb(214, 214, 214);
+  font-family: "Poppins", sans-serif;
+  height: 30px;
+  line-height: 28px;
+  border-radius: 9px;
+  border: 2pt solid $secondaryC;
+  cursor: pointer;
+}
+.imageInput {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+progress {
+  width: 150px;
+}

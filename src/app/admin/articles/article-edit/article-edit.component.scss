@@ -1,0 +1,43 @@
+$secondaryC: #363a45;
+$accentC: #6d72ed;
+$containerC: rgb(196, 196, 196, 0.33);
+$itemC: #c4c4c4;
+
+.button {
+  width: 120px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    .button-block {
+      width: 122px;
+      height: 52px;
+      .button-text {
+        font-size: 15pt;
+      }
+    }
+  }
+
+  .button-block {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background-color: $accentC;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+
+    .button-text {
+      text-align: center;
+      line-height: normal;
+      margin: 0 auto;
+      font-size: 14pt;
+      color: white;
+      text-shadow: $secondaryC 1px 1px;
+    }
+  }
+}

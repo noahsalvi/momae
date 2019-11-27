@@ -4,13 +4,13 @@ $containerC: #c4c4c454;
 $itemC: #c4c4c4;
 
 .articles {
-  border-bottom: 4px solid $accentC;
+  cursor: pointer;
+  color: gray;
+  //   font-size: 20pt;
   outline: none;
 }
 .reservations {
-  cursor: pointer;
-  color: gray;
-  // font-size: 20pt;
+  border-bottom: 4px solid $accentC;
   outline: none;
 }
 
@@ -19,30 +19,35 @@ ul {
   padding-top: 20px;
 }
 li {
-  margin: 10px 0;
-  width: 98%;
-  height: 60px;
   list-style: none;
-  background-color: white;
-  border-radius: 20px;
-  padding: 0 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: transform 0.2s;
-  &:hover {
-    transform: perspective(1px) scale(1.01);
+  //moved everything from li to #div-artikel, so that i can use the div declaring the variable for artikel
+
+  #div-artikel {
+    margin: 10px 0;
+    width: 98%;
+    height: 60px;
+    list-style: none;
+    background-color: $secondaryC;
+    border-radius: 20px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+    &:hover {
+      transform: perspective(1px) scale(1.01);
+    }
   }
 
   .title {
-    color: $secondaryC;
+    color: white;
     font-weight: 500;
     font-size: 21px;
   }
-  .article-tools {
+  .reservation-tools {
     display: flex;
     align-items: center;
-    .price {
+    .name {
       align-self: flex-start;
       color: $accentC;
       font-weight: 500;
@@ -51,10 +56,10 @@ li {
       min-width: 120px;
       text-align: left;
     }
-    .amount {
+    .price {
       align-self: center;
       min-width: 50px;
-      color: $secondaryC;
+      color: white;
       font-weight: 500;
       font-size: 21px;
       margin-right: 40px;
