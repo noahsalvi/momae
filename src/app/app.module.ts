@@ -25,6 +25,7 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { ReservationsComponent } from "./admin/reservations/reservations.component";
 import { ReservationEditComponent } from './admin/reservations/reservation-edit/reservation-edit.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -50,18 +51,14 @@ import { ReservationEditComponent } from './admin/reservations/reservation-edit/
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
-<<<<<<< HEAD
     FontAwesomeModule,
     BrowserAnimationsModule
   ],
   providers: [
-    AngularFireAuthGuard
-=======
+    AngularFireAuthGuard,
     BrowserAnimationsModule,
     HttpClientModule
->>>>>>> 79434083b897b042bf90703d3c3488e654833dc3
   ],
-  providers: [AngularFireAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
