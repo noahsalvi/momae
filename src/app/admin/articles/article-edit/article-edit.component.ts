@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { Router, ActivatedRoute } from "@angular/router";
 import { isDefined } from "@angular/compiler/src/util";
+import { Article } from "../articles.component";
 
 @Component({
   selector: "app-article-edit",
@@ -11,7 +12,8 @@ import { isDefined } from "@angular/compiler/src/util";
 export class ArticleEditComponent implements OnInit {
   db: AngularFirestore;
   router: Router;
-  article = {};
+  article: Article = new Article();
+
   id: any;
 
   constructor(db: AngularFirestore, route: ActivatedRoute, router: Router) {
@@ -30,7 +32,7 @@ export class ArticleEditComponent implements OnInit {
       .collection("artikel")
       .doc(this.id)
       .valueChanges()
-      .subscribe(doc => {
+      .subscribe((doc: Article) => {
         if (isDefined(doc)) {
           this.article = doc;
         } else {

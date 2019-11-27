@@ -1,21 +1,17 @@
+<app-header></app-header>
 <div class="card">
-    <img src="assets/Nike.jpg" width="300" height="200">
-    <div class="card-body" >
-        <h5 class="card-title">Nike Schuh</h5>
-        <p class="card-text">2000.-</p>
-        <button class="btn btn-primary btn-block"
-         (click)="addToCart()"> 
-        Add to card
-        </button>
-        <ng-template #updateQuantity>
-        <!-- loading -->
-        </ng-template>
-    </div>
+  <img src="assets/Nike.jpg" width="300" height="200" />
+  <div class="card-body">
+    <h5 class="card-title">Nike Schuh</h5>
+    <p class="card-text">2000.-</p>
+    <button class="btn btn-primary btn-block" (click)="addToCart()">
+      Add to card
+    </button>
+    <ng-template #updateQuantity>
+      <!-- loading -->
+    </ng-template>
+  </div>
 </div>
-
-
-
-
 
 <!--
 <div class="card">
@@ -45,3 +41,4 @@
     </div>
 </div>
  -->
+<app-footer></app-footer>

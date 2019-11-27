@@ -6,6 +6,14 @@ import {
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 
+export class Article {
+  titel: string;
+  beschreibung: string;
+  menge: number;
+  preis: number;
+  bild?: string;
+}
+
 @Component({
   selector: "app-articles",
   templateUrl: "./articles.component.html",

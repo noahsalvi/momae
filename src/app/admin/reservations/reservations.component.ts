@@ -14,7 +14,9 @@ export class Reservation {
   vorname: string;
   name: string;
   datum: any;
-  artikel: Observable<any>;
+  artikel: {
+    id: string;
+  };
   telefon: string;
   email: string;
 }
