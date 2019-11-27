@@ -1,1 +1,47 @@
-<p>detail-article works!</p>
+<div class="card">
+    <img src="assets/Nike.jpg" width="300" height="200">
+    <div class="card-body" >
+        <h5 class="card-title">Nike Schuh</h5>
+        <p class="card-text">2000.-</p>
+        <button class="btn btn-primary btn-block"
+         (click)="addToCart()"> 
+        Add to card
+        </button>
+        <ng-template #updateQuantity>
+        <!-- loading -->
+        </ng-template>
+    </div>
+</div>
+
+
+
+
+
+<!--
+<div class="card">
+    <img
+        class="card-img-top"
+        [src]="product.imageUrl"
+        width="300"
+        height="200"
+        *ngIf="product.imageUrl">
+    <div class="card-body">
+        <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text">{{product.price | currency:'USD'}}</p>
+        <div class="card-footer" *ngIf="isBtnVisible && shoppingCart">
+            <button
+                class="btn btn-primary btn-block"
+                (click)="addToCart()"
+                *ngIf="shoppingCart.getQuantity(product) === 0; else updateQuantity">
+                Add to cart
+            </button>
+            <ng-template #updateQuantity>
+                <product-quantity
+                [product]="product"
+                [shoppingCart]="shoppingCart">
+                </product-quantity>
+            </ng-template>
+        </div>
+    </div>
+</div>
+ -->
