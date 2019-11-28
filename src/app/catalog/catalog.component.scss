@@ -15,18 +15,24 @@
 /* style the card */
 .card {
     width: 320px;
-    background-color: lightgray;
+    border: none;
+    background-color: white;
     padding: 8px 8px 8px 8px;
     margin-top: 40px;
     margin-bottom: 10px;
     margin-left: 20px;
+    transition: all 0.5s ease;
     .card-body{
-        width: 300px;
-        background-color:lightgray;
+        width: 320px;
+        background-color:white;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 }
-
+.card:hover {
+    width: 320px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 
 /* remove padding from buttons */
@@ -37,4 +43,8 @@
 /* remove rounded corners from buttons */
 .btn {
     border-radius: 0 !important;
+    background-color: whitesmoke;
+    border-color: lightgray;
+    color: grey;
+    border-radius: 25%;
 }
