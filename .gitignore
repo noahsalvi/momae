@@ -43,5 +43,3 @@ testem.log
 Thumbs.db
 
 #Custom Angular ingores
-node_modules
-docs 
