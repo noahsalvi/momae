@@ -32,7 +32,11 @@ export class LoginComponent implements OnInit {
     this.afAuth.auth.getRedirectResult().then(result => {
       console.log(result.user);
       if (result.user) {
-        if (result.user.email == "noahsalvi@me.com") {
+        if (
+          result.user.email == "noahsalvi@me.com" ||
+          result.user.email == "nikitaruegsegger@gmail.com" ||
+          result.user.email == "guamuo@gmail.com"
+        ) {
           this.router.navigate(["/admin"]);
         } else {
           this.logout();
