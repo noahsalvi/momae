@@ -10,19 +10,16 @@ import { Article } from "../articles.component";
   styleUrls: ["./article-edit.component.scss"]
 })
 export class ArticleEditComponent implements OnInit {
-  db: AngularFirestore;
-  router: Router;
   article: Article = new Article();
+  id: string;
 
-  id: any;
-
-  constructor(db: AngularFirestore, route: ActivatedRoute, router: Router) {
+  constructor(
+    private db: AngularFirestore,
+    route: ActivatedRoute,
+    private router: Router
+  ) {
     this.id = route.snapshot.paramMap.get("id");
-    this.db = db;
-    this.router = router;
     this.checkId();
-
-    //check if doc exists with id, if no return and show message
   }
 
   ngOnInit() {}
@@ -36,7 +33,7 @@ export class ArticleEditComponent implements OnInit {
         if (isDefined(doc)) {
           this.article = doc;
         } else {
-          this.router.navigate(["/admin"]); //Page not found
+          this.router.navigate(["/admin"]);
         }
       });
   }

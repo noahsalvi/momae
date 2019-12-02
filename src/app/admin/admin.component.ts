@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { AngularFireAuth } from "@angular/fire/auth";
-import { auth } from "firebase/app";
 import { Router } from "@angular/router";
 
 @Component({
@@ -13,7 +12,7 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {}
 
-  async logout() {
-    await this.afAuth.auth.signOut().then(() => this.router.navigate(["/"]));
+  logout() {
+    this.afAuth.auth.signOut().then(() => this.router.navigate(["/"]));
   }
 }

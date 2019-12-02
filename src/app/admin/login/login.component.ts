@@ -15,12 +15,11 @@ export class LoginComponent implements OnInit {
   login() {
     this.afAuth.authState.subscribe(res => {
       if (res && res.uid) {
-        console.log("user is logged in");
+        // console.log("user is logged in");
+        this.router.navigate(["/admin"]);
       } else {
-        console.log("user not logged in");
-        this.afAuth.auth
-          .signInWithRedirect(new auth.GoogleAuthProvider())
-          .then(resp => console.log("test"));
+        // console.log("user not logged in");
+        this.afAuth.auth.signInWithRedirect(new auth.GoogleAuthProvider());
       }
     });
   }
@@ -30,7 +29,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.afAuth.auth.getRedirectResult().then(result => {
-      console.log(result.user);
       if (result.user) {
         if (
           result.user.email == "noahsalvi@me.com" ||

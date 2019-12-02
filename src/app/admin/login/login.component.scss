@@ -20,3 +20,14 @@ $itemC: #c4c4c4;
   height: 150px;
   border-bottom: 4pt $accentC solid;
 }
+
+.frame {
+  width: 1000px;
+  margin: 25px auto 0 auto;
+
+  h2 {
+    font-size: 2rem;
+    font-family: "Fire Sans Condensed", sans-serif;
+    width: fit-content;
+  }
+}
